@@ -67,3 +67,16 @@ function mySize(collection) {
     }
     return count
 }
+
+// Array functions
+function myFirst(arr, num) {
+    let results = []
+    if (!num){
+        return arr[0]
+    }else {
+        for(let i = 0; i < num; i++) {
+            results.push(arr[i])
+        }
+        return results
+    }
+}
