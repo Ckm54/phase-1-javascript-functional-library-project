@@ -40,10 +40,21 @@ function myReduce(collection, callback, acc) {
 }
 
 function myFind(collection, predicate) {
-    let workingData = makeArray(collection)
+    const workingData = makeArray(collection)
     for(let i = 0; i < workingData.length; i++){
         if (predicate(workingData[i])) {
             return workingData[i]
         }
     }
+}
+
+function myFilter(collection, predicate) {
+    const workingData = makeArray(collection)
+    let resultsArray = []
+    for(let i = 0; i < workingData.length; i++){
+        if(predicate(workingData[i])){
+            resultsArray.push(workingData[i]);
+        }
+    }
+    return resultsArray
 }
