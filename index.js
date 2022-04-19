@@ -39,3 +39,11 @@ function myReduce(collection, callback, acc) {
     return acc
 }
 
+function myFind(collection, predicate) {
+    let workingData = makeArray(collection)
+    for(let i = 0; i < workingData.length; i++){
+        if (predicate(workingData[i])) {
+            return workingData[i]
+        }
+    }
+}
