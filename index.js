@@ -87,3 +87,11 @@ function myLast(arr, num) {
         return arr.slice(-(num))
     }
 }
+
+function myKeys(object) {
+    let result = [];
+    for(let key in object) {
+        result.push(key);
+    }
+    return result;
+}
