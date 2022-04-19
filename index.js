@@ -80,3 +80,10 @@ function myFirst(arr, num) {
         return results
     }
 }
+function myLast(arr, num) {
+    if(!num) {
+        return arr.slice(-1)[0]
+    }else {
+        return arr.slice(-(num))
+    }
+}
