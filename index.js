@@ -26,3 +26,16 @@ function myMap(collection, callback) {
     return outputArray
 }
 
+function myReduce(collection, callback, acc) {
+    let workingData = makeArray(collection)
+    if(!acc){
+        acc = workingData[0]
+        workingData = workingData.slice(1)
+    }
+    // let acc = workingData[0]
+    for(let i=0; i<workingData.length; i++){
+        acc = callback(acc, workingData[i], workingData)
+    }
+    return acc
+}
+
