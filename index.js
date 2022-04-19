@@ -95,3 +95,11 @@ function myKeys(object) {
     }
     return result;
 }
+
+function myValues(object) {
+    let result = [];
+    for(let key in object) {
+        result.push(object[key]);
+    }
+    return result;
+}
