@@ -58,3 +58,12 @@ function myFilter(collection, predicate) {
     }
     return resultsArray
 }
+
+function mySize(collection) { 
+    const workingData = makeArray(collection)
+    let count = 0;
+    for(let i = 0; i < workingData.length; i++) {
+        count++
+    }
+    return count
+}
